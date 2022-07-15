@@ -8,8 +8,8 @@ class Chitter < Sinatra::Base
     erb :index
   end
   get '/peeps' do
-  @peeps = ["Hello, I am peep", "I am also a peep", "Also a peep"]
-  erb :peeps
+    @peeps = Peeps.all
+    erb :peeps
   end
 
   run! if app_file == $0
