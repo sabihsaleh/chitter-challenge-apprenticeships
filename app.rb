@@ -5,7 +5,7 @@ class Chitter < Sinatra::Base
     'Test page'
   end
   get '/' do
-    'Welcome to Chitter'
+    erb :index
   end
 
 
